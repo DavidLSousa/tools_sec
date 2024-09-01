@@ -4,6 +4,11 @@ import requests
 
 url = sys.argv[1]
 
+# Add Cookies na requisição, se necessário, assim, pode burlar um cloudfare
+# Automação:
+    # Buscar no navegador inf de USER_AGENT e COOKIES, e usar isso para fazer a requisição
+
+# Pesquisar sobre o uso de threads no Burte Force
 
 def bruteForce(url, directories):
     for dir in directories:
@@ -18,8 +23,8 @@ def bruteForce(url, directories):
             else:
                 pass
             
-        except ValueError:
-            print(ValueError)
+        except:
+            pass
 
 
 def main():
